@@ -35,18 +35,18 @@ jobs:
       - run:
           name: Tag Docker images
           command: |
-            docker tag udagram-api-feed:latest namnd0212/udagram-api-feed:latest
-            docker tag udagram-api-user:latest namnd0212/udagram-api-user:latest
-            docker tag udagram-frontend:latest namnd0212/udagram-frontend:latest
-            docker tag udagram-reverseproxy:latest namnd0212/reverseproxy:latest
+            docker tag udagram-api-feed:latest namnd0210/udagram-api-feed:latest
+            docker tag udagram-api-user:latest namnd0210/udagram-api-user:latest
+            docker tag udagram-frontend:latest namnd0210/udagram-frontend:latest
+            docker tag udagram-reverseproxy:latest namnd0210/reverseproxy:latest
 
       - run:
           name: Push Docker images
           command: |
-            docker push namnd0212/udagram-api-feed:latest
-            docker push namnd0212/udagram-api-user:latest
-            docker push namnd0212/udagram-frontend:latest
-            docker push namnd0212/reverseproxy:latest
+            docker push namnd0210/udagram-api-feed:latest
+            docker push namnd0210/udagram-api-user:latest
+            docker push namnd0210/udagram-frontend:latest
+            docker push namnd0210/reverseproxy:latest
 
 workflows:
   version: 2

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: namnd-project3-s3
+  AWS_PROFILE: account2
+  AWS_REGION: us-east-1
+  JWT_SECRET: testing
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: database-2.c9azrwtsqgou.us-east-1.rds.amazonaws.com
+  NODE_OPTIONS: --openssl-legacy-provider --max-old-space-size=1024
+  URL: http://a5e46197e9e9a4a249889e4c0feed6f5-206959448.us-east-1.elb.amazonaws.com:8100
+metadata:
+  name: env-config

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    service: reserveproxy
+  name: reserveproxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: reserveproxy
+  template:
+    metadata:
+      labels:
+        service: reserveproxy
+    spec:
+      containers:
+        - image: namnd0210/reverseproxy
+          name: reserveproxy
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
